@@ -6,7 +6,6 @@
   color: white;
 }
 
-
 .business-section {
   position: relative;
   height: 380px;
@@ -23,7 +22,6 @@
   background-repeat: no-repeat;
 }
 
-
 .business-overlay {
   position: absolute;
   top: 0;
@@ -36,7 +34,6 @@
 
   z-index: 1;
 }
-
 
 .business-hero-content {
   position: relative;
@@ -79,7 +76,6 @@
   line-height: 1.6;
 }
 
-
 .business-main-content {
   width: 100%;
   min-height: 500px;
@@ -89,7 +85,6 @@
 
   background-color: #162247;
 }
-
 
 .business-project-section {
   width: 100%;
@@ -145,7 +140,6 @@
   color: #f47b42;
 }
 
-
 .business-project-row {
   width: 100%;
   min-height: 220px;
@@ -154,4 +148,3 @@
 
   background-color: rgba(255, 255, 255, 0.04);
 }
-

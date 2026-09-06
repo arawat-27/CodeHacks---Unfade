@@ -1,0 +1,50 @@
+.moderation-page {
+  min-height: 100vh;
+  background: #162247;
+  color: #fff;
+}
+.moderation-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 135px 6% 70px;
+}
+.moderation-eyebrow {
+  margin: 0;
+  color: #ffad8c;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.moderation-content h1 {
+  margin: 8px 0;
+  font-size: clamp(38px, 5vw, 62px);
+}
+.moderation-content > p:not(.moderation-eyebrow) {
+  max-width: 700px;
+  color: #d9d9ef;
+  line-height: 1.6;
+}
+.moderation-section {
+  margin-top: 54px;
+  padding-top: 25px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+.moderation-section h2 {
+  margin: 0 0 20px;
+  color: #fee5d9;
+  font-size: 30px;
+}
+.approved-section {
+  border-top-color: #74cf8e;
+}
+.approved-section h2 {
+  font-weight: 900;
+  color: #bff4cb;
+}
+.approved-project {
+  outline: 3px solid #74cf8e;
+}
+.approved-project h3 {
+  font-weight: 900;
+}

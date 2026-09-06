@@ -1,36 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import './index.css';
+import "./index.css";
 import App from "./App";
+import Landing from "./Landing";
 import Business from "./Business";
 import Music from "./Music";
 import Films from "./Films";
 import Books from "./Books";
+import Other from "./Other";
 import Collaborate from "./Collaborate";
 import AddWork from "./AddWork";
 import Profile from "./Profile";
+import Moderation from "./Moderation";
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root")
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/Business" element={<Business />} />
-          <Route path="/Music" element={<Music />} />
-          <Route path="/Films" element={<Films />} />
-          <Route path="/Books" element={<Books />} />
-          <Route path="/Collaborate" element={<Collaborate />} />
-          <Route path="/AddWork" element={<AddWork />} />
-          <Route path="/Profile" element={<Profile />} />
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/Home" element={<App />} />
+        <Route path="/Business" element={<Business />} />
+        <Route path="/Music" element={<Music />} />
+        <Route path="/Films" element={<Films />} />
+        <Route path="/Books" element={<Books />} />
+        <Route path="/Other" element={<Other />} />
+        <Route path="/Collaborate" element={<Collaborate />} />
+        <Route path="/AddWork" element={<AddWork />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/Moderation" element={<Moderation />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
