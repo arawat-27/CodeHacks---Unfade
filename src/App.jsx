@@ -14,7 +14,7 @@ function App() {
         <img 
           src = {backgroundImage}
           className="about-background"
-          alt="Unfade Background"
+          alt="Unfade Backgrounnpmd"
         />
 
         <div className="about-overlay" />
@@ -156,3 +156,4 @@ function App() {
 }
 
 export default App;
+
