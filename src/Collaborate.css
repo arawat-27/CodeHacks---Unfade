@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+.collaborate-page {
+  color: #101a3c;
+  background: #fffaf4;
+  font-family: "DM Sans", Arial, sans-serif;
+  overflow: hidden;
+}
+
+.collaborate-hero {
+  min-height: 510px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 88px 28px;
+  text-align: center;
+  color: #fffaf4;
+  background:
+    radial-gradient(circle at 84% 30%, #6e4be4 0, #302273 32%, transparent 58%),
+    linear-gradient(125deg, #101a3c 10%, #251957 100%);
+}
+
+.hero-copy {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #f76e44;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.collaborate-hero .eyebrow {
+  color: #ffad7c;
+}
+
+h1,
+h2 {
+  margin: 12px 0 0;
+  font-family: Georgia, serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 6vw, 5.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+h1 em {
+  color: #ffc9b7;
+}
+
+.hero-copy p {
+  max-width: 560px;
+  margin: 28px auto;
+  color: #e2ddf1;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.primary-button,
+.browse-button,
+.text-button,
+.filter {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.primary-button {
+  padding: 15px 23px;
+  border-radius: 999px;
+  color: white;
+  background: #f76e44;
+  font-weight: 800;
+  box-shadow: 0 9px 18px rgba(10, 5, 38, 0.24);
+  transition: 0.2s;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  background: #ff8058;
+}
+
+.opportunities {
+  padding: 90px max(7vw, 28px) 100px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.section-heading h2,
+
+.browse-button,
+.text-button {
+  color: #5d3dca;
+  background: transparent;
+  font-weight: 800;
+}
+
+.browse-button span,
+.text-button span {
+  margin-left: 5px;
+  font-size: 1.25em;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 36px 0 26px;
+}
+
+.filter {
+  padding: 9px 17px;
+  border: 1px solid #ddd4cc;
+  border-radius: 99px;
+  color: #665e5b;
+  background: transparent;
+  transition: 0.2s;
+}
+
+.filter.active,
+.filter:hover {
+  border-color: #101a3c;
+  color: white;
+  background: #101a3c;
+}
+
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.opportunity-card {
+  display: flex;
+  min-height: 348px;
+  flex-direction: column;
+  padding: 26px;
+  border: 1px solid #e7ddd5;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 6px 18px rgba(16, 26, 60, 0.035);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(16, 26, 60, 0.1);
+}
+
+.card-topline,
+.card-footer,
+.creator {
+  display: flex;
+  align-items: center;
+}
+
+.card-topline,
+.card-footer {
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.category-pill {
+  padding: 6px 11px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.coral {
+  color: #9b3019;
+  background: #ffd5ca;
+}
+
+.violet {
+  color: #482795;
+  background: #e4ddff;
+}
+
+.gold {
+  color: #80520d;
+  background: #ffe7a5;
+}
+
+.posted-time {
+  color: #918985;
+  font-size: 0.76rem;
+}
+
+.opportunity-card h2 {
+  font-size: 1.75rem;
+  line-height: 1.08;
+}
+
+.opportunity-card > p {
+  margin: 15px 0;
+  color: #67616b;
+  line-height: 1.55;
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.skill-row span {
+  padding: 5px 9px;
+  border-radius: 5px;
+  color: #50496a;
+  background: #f2eff8;
+  font-size: 0.74rem;
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid #eee8e3;
+}
+
+.creator {
+  gap: 9px;
+}
+
+.creator strong,
+.creator small {
+  display: block;
+}
+
+.creator strong {
+  font-size: 0.83rem;
+}
+
+.creator small {
+  margin-top: 3px;
+  color: #8c8583;
+  font-size: 0.7rem;
+}
+
+.avatar {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+
