@@ -11,7 +11,7 @@ import StudentAccess from "./StudentAccess";
 import "./AddWork.css";
 
 const categories = {
-  Business: ["Food & drink", "Fashion", "Technology", "Services", "Other"],
+  Business: ["Most popular business", "New businesses", "Cafes", "Food & drink", "Beauty & wellness", "Art & design", "Services"],
   Music: ["Artist", "Band", "Producer", "DJ", "Other"],
   Films: ["Short film", "Documentary", "Animation", "Music video", "Other"],
   Books: ["Poetry", "Fiction", "Non-fiction", "Comics", "Other"],
