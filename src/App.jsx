@@ -22,18 +22,23 @@ function App() {
        
         <div className="about-content">
           <p className = "about-label">
-            ABOUT UNFADE
+            About
           </p>
-
-          <h1>  UNFADE</h1>
-
-          <p className="about-description">
-            Unfade is Amazing! You should join it!
-          </p>
+          <h1>UNFADE</h1>
 
           <p className="about-description">
-            yes yes! wowwwwwwwwwwwwwwwwww! cccccccccccc
+            Independent creators often struggle to get noticed while large
+    companies take up most of the spotlight.
           </p>
+          
+          <p className="about-description">
+            Unfade gives college creators a place to share their businesses,
+    films, music, books, and original projects with people looking
+    for something new. Unfade also helps creators connect. Through collaboration posts,
+    students can find actors, musicians, writers, designers, and other
+    people who can help bring their ideas to life.
+          </p>
+
         </div>
       </section>
       <main
@@ -78,7 +83,6 @@ function App() {
             </button>
           </div>
 
-          {/* Artist cards will go here later */}
           <div className="project-row">
             
           </div>
@@ -100,7 +104,6 @@ function App() {
             </button>
           </div>
 
-          {/* Project cards will go here later */}
           <div className="project-row">
             
           </div>
@@ -156,3 +159,4 @@ function App() {
 }
 
 export default App;
+

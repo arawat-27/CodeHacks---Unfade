@@ -1,5 +1,5 @@
 import NavBar from "./NavBar";
-import "./Page.css";
+import "./AddWork.css";
 
 function AddWork() {
   return (
