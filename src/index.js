@@ -15,6 +15,7 @@ import Collaborate from "./Collaborate";
 import AddWork from "./AddWork";
 import Profile from "./Profile";
 import Moderation from "./Moderation";
+import CreatorProfile from "./CreatorProfiles";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -33,6 +34,7 @@ root.render(
         <Route path="/AddWork" element={<AddWork />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Moderation" element={<Moderation />} />
+        <Route path="/Creators/:creatorName" element={<CreatorProfile />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

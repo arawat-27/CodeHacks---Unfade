@@ -3,6 +3,7 @@ import collaborationImage from "./Collab.jpeg";
 import "./App.css";
 
 import NavBar from "./NavBar";
+import { NewArtists } from "./CreatorProfiles";
 
 function App() {
   return (
@@ -64,7 +65,9 @@ function App() {
             <button className="view-all-button">View all →</button>
           </div>
 
-          <div className="project-row"></div>
+          <div className="project-row">
+            <NewArtists />
+          </div>
         </section>
 
         {/* Try Something New */}
