@@ -119,6 +119,8 @@
   font-weight: 700;
 }
 
+.profile-button { padding: 12px 20px; color: white; background-color: #ed713f; border: none; border-radius: 22px; font-weight: 700; }
+
 .search-container {
   position: absolute;
 
@@ -166,4 +168,3 @@
 
   outline: none;
 }
-

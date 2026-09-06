@@ -1,5 +1,5 @@
 //Import React library
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 //Importing the useNavigate hook from react-router-dom for navigation
 import { useNavigate } from 'react-router-dom'
@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import './NavBar.css'
 
 import logoImage from "./logoo.png";
+import { supabase } from "./supabase";
 
 const NavBar = () => {
 
@@ -16,6 +17,13 @@ const NavBar = () => {
 
   const [searchOpen, setSearchOpen] =
     useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  useEffect(() => {
+    supabase?.auth.getSession().then(({ data }) => setIsSignedIn(Boolean(data.session)));
+    const { data: { subscription } } = supabase?.auth.onAuthStateChange((_event, session) => setIsSignedIn(Boolean(session))) || { data: {} };
+    return () => subscription?.unsubscribe();
+  }, []);
 
   const handleHomeClick = (event) => {
     event.preventDefault();
@@ -46,6 +54,7 @@ const NavBar = () => {
   const handleAddWorkClick = () => {
     navigate("/AddWork");
   };
+  const handleProfileClick = () => navigate("/Profile");
 
   // Open and close the search bar
   const handleSearchClick = () => {
@@ -91,12 +100,7 @@ const NavBar = () => {
           Collaborate
         </button>
 
-        <button
-          className="add-work-button"
-          onClick={handleAddWorkClick}
-        >
-          + Add Your Work
-        </button>
+        {isSignedIn ? <button className="profile-button" onClick={handleProfileClick}>Profile</button> : <button className="add-work-button" onClick={handleAddWorkClick}>+ Add Your Work</button>}
       </div>
 
       {/* Search bar remains inside the header */}

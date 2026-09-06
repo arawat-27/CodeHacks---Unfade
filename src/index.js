@@ -11,6 +11,7 @@ import Films from "./Films";
 import Books from "./Books";
 import Collaborate from "./Collaborate";
 import AddWork from "./AddWork";
+import Profile from "./Profile";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -27,6 +28,7 @@ root.render(
           <Route path="/Books" element={<Books />} />
           <Route path="/Collaborate" element={<Collaborate />} />
           <Route path="/AddWork" element={<AddWork />} />
+          <Route path="/Profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
   </React.StrictMode>
@@ -35,4 +37,3 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-
