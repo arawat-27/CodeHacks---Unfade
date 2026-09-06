@@ -1,0 +1,169 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 76px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    background-color: #101831;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+    text-decoration: none;
+    }
+
+.logo-image {
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  margin-left: 70px;
+}
+
+.navbar a {
+  padding: 10px 14px;
+
+  color: white;
+
+  border-radius: 25px;
+
+  text-decoration: none;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+}
+
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-left: auto;
+}
+
+.search-button {
+  width: 42px;
+  height: 42px;
+
+  color: white;
+  background-color: #172143;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  font-size: 19px;
+}
+
+.collaborate-button {
+  padding: 12px 28px;
+
+  color: white;
+  background-color: #e26ad8;
+
+  border: none;
+  border-radius: 15px;
+
+  font-weight: 700;
+}
+
+.add-work-button {
+  padding: 12px 20px;
+
+  color: white;
+  background-color: #ed713f;
+
+  border: none;
+  border-radius: 22px;
+
+  font-weight: 700;
+}
+
+.search-container {
+  position: absolute;
+
+  top: 76px;
+  left: 0;
+  right: 0;
+
+  max-height: 0;
+  padding: 0 5%;
+
+  overflow: hidden;
+
+  background-color: #101831;
+
+  transition: 0.3s;
+}
+
+.search-container {
+  position: absolute;
+
+  top: 76px;
+  left: 0;
+  right: 0;
+
+  max-height: 0;
+  padding: 0 5%;
+
+  overflow: hidden;
+
+  background-color: #101831;
+
+  transition: 0.3s;
+}
+
+.search-container input {
+  width: 100%;
+
+  padding: 10px 0;
+
+  color: white;
+  background: transparent;
+
+  border: none;
+  border-bottom: 1px solid #7e88a8;
+
+  outline: none;
+}
+
