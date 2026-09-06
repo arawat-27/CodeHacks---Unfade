@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import App from "./App";
 import "./Landing.css";
 
 const ripples = [
@@ -49,15 +50,22 @@ function Landing() {
     setLeaving(true);
     window.setTimeout(
       () => navigate("/Home"),
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 80 : 860
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 80 : 900
     );
   };
 
   return (
-    <main
-      className={`landing-scene ${leaving ? "is-leaving" : ""}`}
-      aria-label="Unfade opening scene"
-    >
+    <>
+      <div
+        className={`landing-home ${leaving ? "is-entering" : ""}`}
+        aria-hidden="true"
+      >
+        <App />
+      </div>
+      <main
+        className={`landing-scene ${leaving ? "is-leaving" : ""}`}
+        aria-label="Unfade opening scene"
+      >
       <div className="landing-sky" aria-hidden="true" />
       <div className="landing-ocean" aria-hidden="true">
         <div className="landing-horizon" />
@@ -97,8 +105,8 @@ function Landing() {
           unfade
         </button>
       </div>
-      <div className="landing-transition" aria-hidden="true" />
-    </main>
+      </main>
+    </>
   );
 }
 
