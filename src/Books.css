@@ -1,0 +1,150 @@
+.books-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: #162247;
+  color: white;
+}
+
+.books-section {
+  position: relative;
+  height: 380px;
+  margin-top: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.books-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(16, 24, 49, 0.65);
+
+  z-index: 1;
+}
+
+.books-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 700px;
+
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.books-label {
+  margin: 0 0 12px;
+
+  color: #ef76dc;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.books-hero-content h1 {
+  margin: 0 0 18px;
+
+  color: #fee5d9;
+
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.books-description {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: white;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.books-main-content {
+  width: 100%;
+  min-height: 500px;
+
+  padding: 60px 8%;
+  box-sizing: border-box;
+
+  background-color: #162247;
+}
+
+/* Each book category */
+
+.books-project-section {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto 65px;
+}
+
+.books-project-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-bottom: 24px;
+
+  text-align: left;
+}
+
+.books-project-heading h2 {
+  margin: 0 0 7px;
+
+  color: #fee5d9;
+
+  font-size: 30px;
+}
+
+.books-project-heading p {
+  margin: 0;
+
+  color: #b9bfd4;
+
+  font-size: 15px;
+}
+
+.books-view-all-button {
+  padding: 0;
+
+  border: none;
+  background: none;
+
+  color: #ef76dc;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.books-view-all-button:hover {
+  color: #f47b42;
+}
+
+.books-project-row {
+  width: 100%;
+  min-height: 220px;
+
+  border-radius: 12px;
+
+  background-color: rgba(255, 255, 255, 0.04);
+}
