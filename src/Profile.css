@@ -34,11 +34,53 @@
   background: #474590;
   border-radius: 18px;
 }
-.profile-card img {
+.profile-preview-button {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  background: #302f72;
+  border: 0;
+  cursor: pointer;
+}
+.profile-preview-button img {
   width: 100%;
   height: 170px;
   display: block;
   object-fit: cover;
+}
+.profile-preview-label {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(22, 34, 71, 0.88);
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+.profile-preview-button:hover .profile-preview-label,
+.profile-preview-button:focus-visible .profile-preview-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+.profile-preview-button:focus-visible {
+  outline: 3px solid #e26ad8;
+  outline-offset: -3px;
+}
+.profile-preview-placeholder {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: #dddaf2;
+  font-weight: 800;
 }
 .profile-card > div {
   padding: 18px;

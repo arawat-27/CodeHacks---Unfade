@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
+import ProjectPreview from "./ProjectCards";
 import StudentAccess from "./StudentAccess";
 import { supabase } from "./supabase";
 import "./Profile.css";
@@ -9,6 +10,7 @@ function ProfileContent() {
   const [submissions, setSubmissions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [preview, setPreview] = useState(null);
   const navigate = useNavigate();
   const signOut = async () => {
     await supabase.auth.signOut();
@@ -40,7 +42,7 @@ function ProfileContent() {
       const { data, error: queryError } = await supabase
         .from("submissions")
         .select(
-          "id, title, category, subcategory, status, cover_photo, created_at"
+          "id, title, category, subcategory, description, email, website, instagram_handle, phone, cover_photo, media, preview_video, status, created_at"
         )
         .eq("owner_id", user.id)
         .order("created_at", { ascending: false });
@@ -86,9 +88,18 @@ function ProfileContent() {
           <div className="profile-grid">
             {submissions.map((submission) => (
               <article className="profile-card" key={submission.id}>
-                {submission.cover_photo?.url && (
-                  <img src={submission.cover_photo.url} alt="" />
-                )}
+                <button
+                  className="profile-preview-button"
+                  onClick={() => setPreview(submission)}
+                  aria-label={`Preview ${submission.title}`}
+                >
+                  {submission.cover_photo?.url ? (
+                    <img src={submission.cover_photo.url} alt="" />
+                  ) : (
+                    <span className="profile-preview-placeholder">Preview</span>
+                  )}
+                  <span className="profile-preview-label">Preview project</span>
+                </button>
                 <div>
                   <span className={`submission-status ${submission.status}`}>
                     {submission.status}
@@ -118,6 +129,11 @@ function ProfileContent() {
           </div>
         )}
       </main>
+      <ProjectPreview
+        key={preview?.id}
+        project={preview}
+        onClose={() => setPreview(null)}
+      />
     </div>
   );
 }
