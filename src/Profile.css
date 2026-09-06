@@ -1,0 +1,134 @@
+.profile-page {
+  min-height: 100vh;
+  background: #162247;
+  color: #fff;
+}
+.profile-content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 135px 6% 70px;
+}
+.profile-eyebrow {
+  margin: 0;
+  color: #ffad8c;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.profile-content h1 {
+  margin: 8px 0;
+  font-size: clamp(38px, 5vw, 62px);
+}
+.profile-intro {
+  margin: 0 0 32px;
+  color: #d9d9ef;
+}
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+.profile-card {
+  overflow: hidden;
+  background: #474590;
+  border-radius: 18px;
+}
+.profile-card img {
+  width: 100%;
+  height: 170px;
+  display: block;
+  object-fit: cover;
+}
+.profile-card > div {
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 8px 0;
+  font-size: 23px;
+}
+.profile-category,
+.profile-date {
+  margin: 0;
+  color: #e4e2f8;
+  font-size: 13px;
+}
+.profile-date {
+  margin-top: 12px;
+}
+.submission-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.submission-status.pending {
+  color: #61460c;
+  background: #ffe09b;
+}
+.submission-status.approved {
+  color: #15542f;
+  background: #cef0d8;
+}
+.submission-status.rejected {
+  color: #68191d;
+  background: #ffd2d3;
+}
+.empty-profile {
+  padding: 35px;
+  background: #474590;
+  border-radius: 18px;
+}
+.empty-profile h2,
+.empty-profile p {
+  margin: 0;
+}
+.empty-profile p {
+  margin-top: 8px;
+  color: #e4e2f8;
+}
+.profile-error {
+  padding: 12px;
+  background: #ffd8d8;
+  color: #64191a;
+  border-radius: 10px;
+}
+.profile-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.logout-button {
+  height: max-content;
+  margin-top: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #9b9ac5;
+  border-radius: 9px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+.logout-button:hover {
+  border-color: #ffad8c;
+  color: #ffad8c;
+}
+.profile-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.profile-add-button {
+  margin-top: 10px;
+  padding: 11px 15px;
+  color: #fff;
+  background: #e46d39;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}

@@ -1,0 +1,11 @@
+create table if not exists public.submissions (id uuid primary key, owner_id uuid references auth.users(id), category text not null, subcategory text, title text not null check (char_length(title) <= 120), description text not null check (char_length(description) <= 2000), email text not null, website text, instagram_handle text, phone text, cover_photo jsonb not null, media jsonb not null, preview_video jsonb, status text not null default 'pending' check (status in ('pending', 'approved', 'rejected')), created_at timestamptz not null default now());
+alter table public.submissions enable row level security;
+drop policy if exists "anyone can create a submission" on public.submissions;
+drop policy if exists "moderators can view submissions" on public.submissions;
+drop policy if exists "moderators can update submissions" on public.submissions;
+create policy "anyone can create a submission" on public.submissions for insert to anon, authenticated with check (true);
+create policy "moderators can view submissions" on public.submissions for select to authenticated using ((auth.jwt() -> 'app_metadata' ->> 'role') = 'moderator');
+create policy "moderators can update submissions" on public.submissions for update to authenticated using ((auth.jwt() -> 'app_metadata' ->> 'role') = 'moderator') with check ((auth.jwt() -> 'app_metadata' ->> 'role') = 'moderator');
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types) values ('project-media', 'project-media', true, 104857600, array['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/mp4', 'video/webm', 'video/quicktime']) on conflict (id) do update set file_size_limit = excluded.file_size_limit;
+drop policy if exists "anyone can upload project media" on storage.objects;
+create policy "anyone can upload project media" on storage.objects for insert to anon, authenticated with check (bucket_id = 'project-media');

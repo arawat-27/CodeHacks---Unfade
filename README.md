@@ -1,3 +1,21 @@
+# Unfade
+
+## Supabase submission setup
+
+The **Add Your Work** page uploads gallery files, the cover photo, and optional preview video to `project-media`, then writes metadata to `submissions`. Gallery files and preview videos may be up to 100 MB and use resumable uploads above 6 MB; cover photos remain limited to 6 MB for faster pages.
+
+1. Create a Supabase project and run [`supabase/submissions.sql`](supabase/submissions.sql) in its SQL Editor.
+2. Copy `.env.example` to `.env`; add the project URL and **publishable** key from Supabase's Connect dialog.
+3. Restart `npm start`. Never use a `service_role`/secret key in React.
+
+Students may optionally enter a phone number. Public visitors cannot read submissions, and phone numbers are readable only by authenticated accounts whose `app_metadata.role` is `moderator`.
+
+## Student access
+
+Students sign in with an email ending in `.edu` and a secure magic link; there is no password or separate confirmation step. Run [`supabase/student-access.sql`](supabase/student-access.sql) and then enable `public.hook_require_edu_email` in **Authentication → Hooks → Before User Created**. Keep `{{ .ConfirmationURL }}` in Supabase's Magic Link email template.
+
+After running that SQL, new submissions are linked to their student account. The signed-in **Profile** page then shows only that student's submissions. Older submissions created before this update do not have an owner, so they will not appear in a student profile.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

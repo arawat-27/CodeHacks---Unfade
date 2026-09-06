@@ -1,0 +1,417 @@
+.landing-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  overflow: hidden;
+  isolation: isolate;
+  background: #162451;
+  filter: saturate(0.82);
+}
+.landing-sky {
+  position: absolute;
+  inset: 0 0 50%;
+  background: radial-gradient(
+      ellipse 65% 60% at 50% 100%,
+      rgba(237, 133, 102, 0.25),
+      transparent 70%
+    ),
+    linear-gradient(180deg, #142653 0%, #2d3166 43%, #815172 77%, #c87578 100%);
+}
+.landing-ocean {
+  position: absolute;
+  inset: 50% 0 0;
+  overflow: hidden;
+  background: radial-gradient(
+      ellipse 76% 26% at 28% 9%,
+      rgba(162, 204, 214, 0.28),
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 64% 30% at 80% 31%,
+      rgba(92, 160, 190, 0.22),
+      transparent 70%
+    ),
+    linear-gradient(
+      180deg,
+      #4d86a8 0%,
+      #346e99 14%,
+      #285f8d 38%,
+      #1b4778 72%,
+      #163a68 100%
+    );
+}
+.landing-ocean::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+  background: repeating-linear-gradient(
+    177deg,
+    transparent 0 19px,
+    rgba(213, 235, 231, 0.075) 20px,
+    transparent 23px 43px
+  );
+  mix-blend-mode: screen;
+}
+.landing-horizon {
+  position: absolute;
+  z-index: 3;
+  top: -13px;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(
+    to bottom,
+    rgba(248, 205, 177, 0.55),
+    rgba(175, 206, 212, 0.22) 36%,
+    transparent 82%
+  );
+  filter: blur(2px);
+}
+.landing-band {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(168, 207, 213, 0.22),
+    transparent
+  );
+  filter: blur(3px);
+  animation: landing-water 12s ease-in-out infinite alternate;
+}
+.band-one {
+  top: 10%;
+}
+.band-two {
+  top: 44%;
+  opacity: 0.65;
+  animation-duration: 17s;
+}
+.band-three {
+  top: 74%;
+  opacity: 0.45;
+  animation-duration: 20s;
+}
+.landing-ripple {
+  position: absolute;
+  height: 8%;
+  border: 1px solid rgba(208, 229, 228, 0.22);
+  border-left-color: rgba(238, 220, 194, 0.34);
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 68, 112, 0.08),
+    rgba(158, 204, 213, 0.1),
+    rgba(12, 56, 101, 0.14)
+  );
+  box-shadow: 0 -2px 9px rgba(179, 215, 218, 0.08),
+    inset 0 1px rgba(238, 229, 206, 0.12);
+  animation: landing-water var(--wave-duration) ease-in-out infinite alternate;
+}
+.landing-ripple::after {
+  content: "";
+  position: absolute;
+  left: 4%;
+  right: 32%;
+  top: -2px;
+  height: 1px;
+  background: rgba(237, 224, 191, 0.23);
+}
+.landing-reflection {
+  position: absolute;
+  z-index: 2;
+  top: 7%;
+  left: 50%;
+  width: min(21vw, 310px);
+  height: 48%;
+  transform: translateX(-50%);
+  opacity: 0.24;
+  filter: blur(1px);
+}
+.landing-reflection i {
+  position: absolute;
+  left: 50%;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(249, 184, 123, 0.82),
+    transparent
+  );
+  transform: translateX(-50%);
+  animation: landing-water 9s ease-in-out infinite alternate;
+}
+.landing-reflection i:nth-child(1) {
+  top: 8%;
+  width: 35%;
+}
+.landing-reflection i:nth-child(2) {
+  top: 38%;
+  width: 68%;
+  animation-delay: -4s;
+}
+.landing-reflection i:nth-child(3) {
+  top: 74%;
+  width: 100%;
+  animation-delay: -7s;
+}
+.landing-sun {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 50%;
+  width: min(35vw, 550px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+}
+.landing-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: landing-pulse 7s ease-in-out infinite;
+  transition: transform 0.45s ease;
+}
+.ring-four {
+  width: 100%;
+  height: 100%;
+  background: rgba(221, 102, 89, 0.32);
+  animation-delay: -4s;
+}
+.ring-three {
+  width: 79%;
+  height: 79%;
+  background: rgba(238, 104, 58, 0.48);
+  animation-delay: -2.5s;
+}
+.ring-two {
+  width: 58%;
+  height: 58%;
+  background: rgba(248, 76, 23, 0.68);
+  animation-delay: -1s;
+}
+.ring-one {
+  width: 39%;
+  height: 39%;
+  background: rgba(238, 40, 10, 0.92);
+}
+.landing-enter {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  padding: 0.05em 0.18em 0.14em;
+  background: transparent;
+  color: #f8f0e6;
+  font: normal clamp(5rem, 12vw, 12rem) / 0.74 Georgia, "Times New Roman", serif;
+  letter-spacing: -0.09em;
+  cursor: pointer;
+  text-shadow: 0 3px 0 rgba(59, 32, 50, 0.12);
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+.landing-enter:hover,
+.landing-enter:focus-visible {
+  transform: translate(-50%, -50%) scale(1.09);
+  color: #fffaf2;
+  outline: none;
+}
+.landing-sun:has(.landing-enter:hover) .landing-ring,
+.landing-sun:has(.landing-enter:focus-visible) .landing-ring {
+  transform: translate(-50%, -50%) scale(1.09);
+}
+.landing-cloud {
+  position: absolute;
+  z-index: 4;
+  width: var(--cloud-size);
+  height: calc(var(--cloud-size) * 0.36);
+  opacity: 0.65;
+  animation: landing-cloud var(--cloud-duration) ease-in-out infinite alternate;
+}
+.cloud-base {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 44%;
+  border-radius: 99px;
+  background: rgba(229, 163, 125, 0.62);
+}
+.cloud-puff {
+  position: absolute;
+  bottom: 27%;
+  width: 52%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(250, 192, 125, 0.76);
+}
+.puff-one {
+  left: 18%;
+}
+.puff-two {
+  right: 8%;
+  transform: scale(0.82);
+  transform-origin: bottom;
+}
+.cloud-one {
+  --cloud-size: 12vw;
+  --cloud-duration: 16s;
+  left: 10%;
+  top: 23%;
+}
+.cloud-two {
+  --cloud-size: 10vw;
+  --cloud-duration: 21s;
+  right: 9%;
+  top: 23%;
+  animation-delay: -6s;
+}
+.cloud-three {
+  --cloud-size: 9vw;
+  --cloud-duration: 18s;
+  left: 27%;
+  top: 9%;
+  animation-delay: -10s;
+}
+.cloud-four {
+  --cloud-size: 11vw;
+  --cloud-duration: 24s;
+  right: 28%;
+  top: 14%;
+  animation-delay: -3s;
+}
+.landing-crow {
+  position: absolute;
+  z-index: 6;
+  width: 134px;
+  height: 76px;
+  color: #160d20;
+  animation: landing-crow 8s ease-in-out infinite alternate;
+}
+.landing-crow svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: currentColor;
+}
+.landing-wing {
+  transform-box: fill-box;
+  transform-origin: 80% 80%;
+}
+.wing-left {
+  animation: landing-flap-left 1.7s ease-in-out infinite alternate;
+}
+.wing-right {
+  animation: landing-flap-right 1.7s ease-in-out infinite alternate;
+}
+.crow-left {
+  left: 15%;
+  top: 26%;
+}
+.crow-right {
+  right: 15%;
+  top: 34%;
+  width: 82px;
+  height: 44px;
+  animation-duration: 10s;
+  animation-delay: -3s;
+}
+.landing-transition {
+  position: fixed;
+  z-index: 20;
+  left: 50%;
+  top: 50%;
+  width: min(35vw, 550px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f7f2e9;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+}
+.is-leaving .landing-transition {
+  animation: landing-expand 0.86s cubic-bezier(0.7, 0, 0.25, 1) forwards;
+}
+@keyframes landing-cloud {
+  from {
+    transform: translateX(-2vw) translateY(-3px);
+  }
+  to {
+    transform: translateX(3vw) translateY(5px);
+  }
+}
+@keyframes landing-water {
+  from {
+    transform: translateX(-2.5vw) scaleX(0.97);
+  }
+  to {
+    transform: translateX(2.5vw) scaleX(1.03);
+  }
+}
+@keyframes landing-pulse {
+  0%,
+  100% {
+    opacity: 0.88;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes landing-crow {
+  from {
+    transform: translate(-7px, -4px);
+  }
+  to {
+    transform: translate(11px, 7px);
+  }
+}
+@keyframes landing-flap-left {
+  from {
+    transform: rotate(15deg) scaleY(0.82);
+  }
+  to {
+    transform: rotate(-14deg) scaleY(1.06);
+  }
+}
+@keyframes landing-flap-right {
+  from {
+    transform: rotate(-12deg) scaleY(1.04);
+  }
+  to {
+    transform: rotate(17deg) scaleY(0.8);
+  }
+}
+@keyframes landing-expand {
+  to {
+    transform: translate(-50%, -50%) scale(8);
+  }
+}
+@media (max-width: 650px) {
+  .landing-sun {
+    width: 78vw;
+  }
+  .landing-crow.crow-left {
+    left: 4%;
+  }
+  .landing-crow.crow-right {
+    right: 4%;
+  }
+  .landing-cloud {
+    transform: scale(0.8);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .landing-scene *,
+  .landing-scene *::before,
+  .landing-scene *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .is-leaving .landing-transition {
+    animation-duration: 0.08s !important;
+  }
+}

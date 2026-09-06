@@ -1,5 +1,6 @@
 import NavBar from "./NavBar";
 import backgroundImage from "./Background.png";
+import { ProjectCards } from "./ProjectCards";
 import "./Music.css";
 
 function Music() {
@@ -16,15 +17,13 @@ function Music() {
         <div className="music-overlay"></div>
 
         <div className="music-hero-content">
-          <p className="music-label">
-            LISTEN
-          </p>
+          <p className="music-label">LISTEN</p>
 
           <h1>Music</h1>
 
           <p className="music-description">
-            Discover original songs, albums, performances, and
-            independent musicians from college communities.
+            Discover original songs, albums, performances, and independent
+            musicians from college communities.
           </p>
         </div>
       </section>
@@ -32,7 +31,6 @@ function Music() {
       {/* Music categories */}
 
       <main className="music-main-content">
-
         {/* Most Popular Music */}
 
         <section className="music-project-section">
@@ -40,18 +38,14 @@ function Music() {
             <div>
               <h2>Most Popular Music</h2>
 
-              <p>
-                Songs and artists the community is loving
-              </p>
+              <p>Songs and artists the community is loving</p>
             </div>
 
-            <button className="music-view-all-button">
-              View all →
-            </button>
+            <button className="music-view-all-button">View all →</button>
           </div>
 
           <div className="music-project-row">
-            
+            <ProjectCards category="Music" />
           </div>
         </section>
 
@@ -62,19 +56,13 @@ function Music() {
             <div>
               <h2>New Artists</h2>
 
-              <p>
-                Recently added independent musicians
-              </p>
+              <p>Recently added independent musicians</p>
             </div>
 
-            <button className="music-view-all-button">
-              View all →
-            </button>
+            <button className="music-view-all-button">View all →</button>
           </div>
 
-          <div className="music-project-row">
-            
-          </div>
+          <div className="music-project-row"></div>
         </section>
 
         {/* Hip-Hop and Rap */}
@@ -84,19 +72,13 @@ function Music() {
             <div>
               <h2>Hip-Hop & Rap</h2>
 
-              <p>
-                Discover original tracks from emerging artists
-              </p>
+              <p>Discover original tracks from emerging artists</p>
             </div>
 
-            <button className="music-view-all-button">
-              View all →
-            </button>
+            <button className="music-view-all-button">View all →</button>
           </div>
 
-          <div className="music-project-row">
-            
-          </div>
+          <div className="music-project-row"></div>
         </section>
 
         {/* Pop */}
@@ -106,19 +88,13 @@ function Music() {
             <div>
               <h2>Pop</h2>
 
-              <p>
-                Find fresh songs from independent pop artists
-              </p>
+              <p>Find fresh songs from independent pop artists</p>
             </div>
 
-            <button className="music-view-all-button">
-              View all →
-            </button>
+            <button className="music-view-all-button">View all →</button>
           </div>
 
-          <div className="music-project-row">
-            
-          </div>
+          <div className="music-project-row"></div>
         </section>
 
         {/* R&B and Soul */}
@@ -128,19 +104,13 @@ function Music() {
             <div>
               <h2>R&amp;B & Soul</h2>
 
-              <p>
-                Explore smooth sounds and soulful performances
-              </p>
+              <p>Explore smooth sounds and soulful performances</p>
             </div>
 
-            <button className="music-view-all-button">
-              View all →
-            </button>
+            <button className="music-view-all-button">View all →</button>
           </div>
 
-          <div className="music-project-row">
-            
-          </div>
+          <div className="music-project-row"></div>
         </section>
 
         {/* Indie and Alternative */}
@@ -150,19 +120,13 @@ function Music() {
             <div>
               <h2>Indie & Alternative</h2>
 
-              <p>
-                Hear creative sounds that are different from the mainstream
-              </p>
+              <p>Hear creative sounds that are different from the mainstream</p>
             </div>
 
-            <button className="music-view-all-button">
-              View all →
-            </button>
+            <button className="music-view-all-button">View all →</button>
           </div>
 
-          <div className="music-project-row">
-            
-          </div>
+          <div className="music-project-row"></div>
         </section>
 
         {/* Rock */}
@@ -172,21 +136,14 @@ function Music() {
             <div>
               <h2>Rock</h2>
 
-              <p>
-                Discover independent bands, musicians, and performances
-              </p>
+              <p>Discover independent bands, musicians, and performances</p>
             </div>
 
-            <button className="music-view-all-button">
-              View all →
-            </button>
+            <button className="music-view-all-button">View all →</button>
           </div>
 
-          <div className="music-project-row">
-            
-          </div>
+          <div className="music-project-row"></div>
         </section>
-
       </main>
     </div>
   );
