@@ -148,8 +148,7 @@
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  border-top: 1px solid
-    rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .collaboration-section {
@@ -225,8 +224,7 @@
 
   border-radius: 12px;
 
-  box-shadow: 12px 12px 0
-    rgba(22, 34, 71, 0.2);
+  box-shadow: 12px 12px 0 rgba(22, 34, 71, 0.2);
 }
 
 .collaboration-image {
@@ -244,8 +242,7 @@
   justify-content: space-between;
   color: #8e9aba;
   background-color: #101831;
-  border-top: 1px solid
-    rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 11px;
 }
 

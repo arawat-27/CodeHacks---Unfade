@@ -35,7 +35,6 @@
   z-index: 1;
 }
 
-
 .music-hero-content {
   position: relative;
   z-index: 2;
@@ -76,7 +75,6 @@
   font-size: 17px;
   line-height: 1.6;
 }
-
 
 .music-main-content {
   width: 100%;
@@ -121,7 +119,6 @@
 
   font-size: 15px;
 }
-
 
 .music-view-all-button {
   padding: 0;

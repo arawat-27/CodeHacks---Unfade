@@ -1,5 +1,6 @@
 import NavBar from "./NavBar";
 import backgroundImage from "./Background.png";
+import { ProjectCards } from "./ProjectCards";
 import "./Books.css";
 
 function Books() {
@@ -16,15 +17,13 @@ function Books() {
         <div className="books-overlay"></div>
 
         <div className="books-hero-content">
-          <p className="books-label">
-            READ
-          </p>
+          <p className="books-label">READ</p>
 
           <h1>Books</h1>
 
           <p className="books-description">
-            Discover original books, poetry, comics, short stories,
-            and other writing from independent student creators.
+            Discover original books, poetry, comics, short stories, and other
+            writing from independent student creators.
           </p>
         </div>
       </section>
@@ -32,7 +31,6 @@ function Books() {
       {/* Book categories */}
 
       <main className="books-main-content">
-
         {/* Most Popular Books */}
 
         <section className="books-project-section">
@@ -40,18 +38,14 @@ function Books() {
             <div>
               <h2>Most Popular Books</h2>
 
-              <p>
-                Stories and writers the community is loving
-              </p>
+              <p>Stories and writers the community is loving</p>
             </div>
 
-            <button className="books-view-all-button">
-              View all →
-            </button>
+            <button className="books-view-all-button">View all →</button>
           </div>
 
           <div className="books-project-row">
-            
+            <ProjectCards category="Books" />
           </div>
         </section>
 
@@ -62,19 +56,13 @@ function Books() {
             <div>
               <h2>New Writers</h2>
 
-              <p>
-                Recently added independent authors
-              </p>
+              <p>Recently added independent authors</p>
             </div>
 
-            <button className="books-view-all-button">
-              View all →
-            </button>
+            <button className="books-view-all-button">View all →</button>
           </div>
 
-          <div className="books-project-row">
-            
-          </div>
+          <div className="books-project-row"></div>
         </section>
 
         {/* Fiction */}
@@ -84,19 +72,13 @@ function Books() {
             <div>
               <h2>Fiction</h2>
 
-              <p>
-                Explore original characters, worlds, and stories
-              </p>
+              <p>Explore original characters, worlds, and stories</p>
             </div>
 
-            <button className="books-view-all-button">
-              View all →
-            </button>
+            <button className="books-view-all-button">View all →</button>
           </div>
 
-          <div className="books-project-row">
-           
-          </div>
+          <div className="books-project-row"></div>
         </section>
 
         {/* Poetry */}
@@ -106,19 +88,13 @@ function Books() {
             <div>
               <h2>Poetry</h2>
 
-              <p>
-                Discover poetry collections and individual poems
-              </p>
+              <p>Discover poetry collections and individual poems</p>
             </div>
 
-            <button className="books-view-all-button">
-              View all →
-            </button>
+            <button className="books-view-all-button">View all →</button>
           </div>
 
-          <div className="books-project-row">
-            
-          </div>
+          <div className="books-project-row"></div>
         </section>
 
         {/* Comics and Graphic Novels */}
@@ -128,19 +104,13 @@ function Books() {
             <div>
               <h2>Comics & Graphic Novels</h2>
 
-              <p>
-                Find illustrated stories from independent creators
-              </p>
+              <p>Find illustrated stories from independent creators</p>
             </div>
 
-            <button className="books-view-all-button">
-              View all →
-            </button>
+            <button className="books-view-all-button">View all →</button>
           </div>
 
-          <div className="books-project-row">
-            
-          </div>
+          <div className="books-project-row"></div>
         </section>
 
         {/* Short Stories */}
@@ -150,19 +120,13 @@ function Books() {
             <div>
               <h2>Short Stories</h2>
 
-              <p>
-                Read original stories in a shorter format
-              </p>
+              <p>Read original stories in a shorter format</p>
             </div>
 
-            <button className="books-view-all-button">
-              View all →
-            </button>
+            <button className="books-view-all-button">View all →</button>
           </div>
 
-          <div className="books-project-row">
-            
-          </div>
+          <div className="books-project-row"></div>
         </section>
 
         {/* Nonfiction */}
@@ -172,19 +136,13 @@ function Books() {
             <div>
               <h2>Nonfiction</h2>
 
-              <p>
-                Explore essays, memoirs, guides, and real experiences
-              </p>
+              <p>Explore essays, memoirs, guides, and real experiences</p>
             </div>
 
-            <button className="books-view-all-button">
-              View all →
-            </button>
+            <button className="books-view-all-button">View all →</button>
           </div>
 
-          <div className="books-project-row">
-     
-          </div>
+          <div className="books-project-row"></div>
         </section>
 
         {/* Fantasy and Science Fiction */}
@@ -194,20 +152,14 @@ function Books() {
             <div>
               <h2>Fantasy & Science Fiction</h2>
 
-              <p>
-                Discover imaginative worlds and futuristic ideas
-              </p>
+              <p>Discover imaginative worlds and futuristic ideas</p>
             </div>
 
-            <button className="books-view-all-button">
-              View all →
-            </button>
+            <button className="books-view-all-button">View all →</button>
           </div>
 
-          <div className="books-project-row">
-          </div>
+          <div className="books-project-row"></div>
         </section>
-
       </main>
     </div>
   );
