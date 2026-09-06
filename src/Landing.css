@@ -1,3 +1,14 @@
+.landing-home {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: auto;
+  background: #162247;
+}
+.landing-home.is-entering {
+  z-index: 3000;
+  animation: home-reveal 0.86s cubic-bezier(0.7, 0, 0.25, 1) forwards;
+}
 .landing-scene {
   position: fixed;
   inset: 0;
@@ -6,6 +17,9 @@
   isolation: isolate;
   background: #162451;
   filter: saturate(0.82);
+}
+.landing-scene.is-leaving {
+  pointer-events: none;
 }
 .landing-sky {
   position: absolute;
@@ -321,20 +335,13 @@
   animation-duration: 10s;
   animation-delay: -3s;
 }
-.landing-transition {
-  position: fixed;
-  z-index: 20;
-  left: 50%;
-  top: 50%;
-  width: min(35vw, 550px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: #f7f2e9;
-  transform: translate(-50%, -50%) scale(0);
-  pointer-events: none;
-}
-.is-leaving .landing-transition {
-  animation: landing-expand 0.86s cubic-bezier(0.7, 0, 0.25, 1) forwards;
+@keyframes home-reveal {
+  from {
+    clip-path: circle(0% at 50% 50%);
+  }
+  to {
+    clip-path: circle(150% at 50% 50%);
+  }
 }
 @keyframes landing-cloud {
   from {
